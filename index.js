@@ -1,6 +1,6 @@
 // Fonction écrire une tâche
 
-function newElement() {
+function onTaskSubmit() {
     var div = document.createElement("div");
     var inputValue = document.getElementById("myInput").value;
     var txt = document.createTextNode(inputValue);
@@ -11,4 +11,5 @@ function newElement() {
         document.getElementById("myUL").appendChild(div);
     }
     document.getElementById("myInput").value = ""
+
 }
