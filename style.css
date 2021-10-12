@@ -1,7 +1,16 @@
-.container {
-    padding: 30px;
-    background-color: lightblue;
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%)
+}
+
+
+.container{
+    padding : 30px;
+    background-color: #fff;
     margin: 100px 200px;
+    border-radius: 30px;
+    
 }
 
 header {
@@ -28,4 +37,31 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.customButtton {
+    background: #8e49e8;
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding : 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.customInput {
+    width: 25%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+ul div {
+    background-color: red;
+    color : pink;
+    margin: auto;
+    width: 33%;
+    padding-left: -2rem;
 }
