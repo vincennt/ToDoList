@@ -22,3 +22,11 @@ footer {
     align-items: center;
     justify-content: space-around;
 }
+
+
+.taskItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
