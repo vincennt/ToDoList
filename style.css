@@ -1,9 +1,24 @@
-
-
-.header {
+.container{
     padding : 30px;
     background-color: lightblue;
     margin: 100px 200px;
     
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+form {
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
