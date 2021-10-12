@@ -53,7 +53,6 @@ footer {
 
 .customInput {
     width: 25%;
-    
     border: 1px solid #ccc;
     font-size: 17px;
     border-radius: 3px;
@@ -61,5 +60,8 @@ footer {
 
 ul div {
     background-color: red;
-    color : pink
+    color : pink;
+    margin: auto;
+    width: 33%;
+    padding-left: -2rem;
 }
