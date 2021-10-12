@@ -1,14 +1,13 @@
-.container{
-    padding : 30px;
+.container {
+    padding: 30px;
     background-color: lightblue;
     margin: 100px 200px;
-    
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 form {
@@ -18,7 +17,7 @@ form {
 }
 
 footer {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
 }
