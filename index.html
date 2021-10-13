@@ -2,41 +2,42 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous" />
+    <!--Font h1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Font Finish-->
 </head>
 
 <body>
     <div id="myDIV" class="container">
         <!-- header -->
         <header>
-            <h2>My To Do List</h2>
+            <h1>My To Do List</h1>
             <button class="filterButton" type="submit">Filter</button>
         </header>
 
         <!-- Form -->
 
         <form onsubmit="onTaskSubmit(); return false;">
-            <input class="customInput" type="text" id="myInput" placeholder="Ecrivez votre tâche...">
+            <input class="customInput" value="" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
             <button class="customButtton" type="submit" class="addBtn">Add</button>
         </form>
         <ul id="myUL">
-
-            <!-- Just a Test Close Buton  -->
-
-            <button class="closeButton"> X </button>
-
-            <!-- Just a Test Close Buton  -->
-
         </ul>
+        <!-- Just a Test Close Buton  -->
 
+        <button class="closeButton">X</button>
+        <button class="modifButton">|||</button>
+
+        <!-- Just a Test Close Buton  -->
 
         <footer>
             <h5>Number of task left</h5>
