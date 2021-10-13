@@ -72,29 +72,43 @@
     ul {
         margin-right: 32px;
     }
-    
-    ul div {*/
-        color: rgb(58, 58, 58);
-        margin: auto;
-        width: 30%;
-        
+
+
+    .div-task {
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
+        width: 500px;
+        border: 0.5px solid #ccc;
         border-radius: 10px;
-        margin-bottom: 8px;
+        /* width: 30%;   */
+        text-align: center;
+        font-size: 19px;
+        font-weight: bold;
+        padding: 5px 10px 5px 20px;
+        margin: auto;
+        word-wrap: break-word;
     }
     
+    /* ul div {
+        margin: auto;
+        border-radius: 10px;
+        /* color: rgb(58, 58, 58); */   
+    /* } */ 
+/*     
     .div-task {
         background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
         font-size: 19px;
-        width: 500px;
-        display: flex;
-        /* justify-content: space-between; */
-        justify-content: flex-end;
+
+        justify-items: stretch;
         padding: 5px 10px 5px 20px;
         font-weight: bold;
         word-wrap: break-word;
         border: 0.5px solid #ccc;
         
-    }
+    } */
+
+
     /* Close Button / Filter button / random Button  */
     
     
@@ -148,8 +162,8 @@
         background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
     }
     .button_suprim {
-        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
-        color: black;
+        background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
+        color: white;
         width: 40px;
         height: 100%;
         border: none;
@@ -161,8 +175,8 @@
         left: 130px
     }
     
-    .button_suprim:hover {
+    /* .button_suprim:hover {
         background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
         right: 0;
         color: white;
-    }
+    } */
