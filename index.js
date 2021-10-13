@@ -82,6 +82,7 @@ function randomtask() {
             <div class="div-task">
                 ${tache.value}
                 <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
             </div>
         `
     })
@@ -91,8 +92,6 @@ function randomtask() {
 }
 
 function newInput() {
-    document.getElementsByClassName("div-task").innerHTML = `
-    <input type = "text"placeholder = "Modifier votre tâche" onclik = "changeTask()">
-    `
+
 }
 console.log(arrayTaches);
