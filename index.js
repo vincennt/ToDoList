@@ -16,14 +16,19 @@ function onTaskSubmit() {
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache) {
+    arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class= div-task>${tache.value}</div>
+            <div class="div-task">${tache.value} <input type="button" value="Modif." onclick="newInput()">
+            </div>
         `
     })
 
     document.getElementById("myInput").value = ''
 
+}
 
-
+function newInput() {
+    document.getElementsByClassName("div-task").innerHTML = `
+    <input type = "text"placeholder = "Modifier votre tâche" onclik = "changeTask()">
+        `
 }
