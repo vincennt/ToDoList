@@ -9,13 +9,14 @@ function onTaskSubmit() {
         value: inputValue
     }
 
+
     console.log(tache);
     arrayTaches.push(tache)
     console.log(arrayTaches)
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache,index) {
+    arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
@@ -25,18 +26,18 @@ function onTaskSubmit() {
     })
 
     document.getElementById("myInput").value = ''
-    
 }
 
+
 // function qui filtre le tableau et re affiche les nouvelle valeur du tableau après avoir suprimer la tache 
-function suprimeTask(i){
-    arrayTaches = arrayTaches.filter(function(value,index) {
+function suprimeTask(i) {
+    arrayTaches = arrayTaches.filter(function(value, index) {
         return i !== index;
     });
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache,index) {
+    arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
