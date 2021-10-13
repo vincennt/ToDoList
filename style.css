@@ -41,6 +41,7 @@ footer {
 
 .customButtton {
     background: #8e49e8;
+    background: linear-gradient(to bottom, #ba8ff1 0%, #8e49e8 100%);;
     width: 60px;
     height: 100%;
     border: none;
@@ -53,15 +54,76 @@ footer {
 
 .customInput {
     width: 25%;
-    border: 1px solid #ccc;
-    font-size: 17px;
+    border: 1px solid rgb(107, 107, 107);
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 3px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, #e0e0e0 100%);
+    padding: 4px;
+
+}
+
+/* Added Task Section */
+
+ul {
+    margin-right: 32px;
 }
 
 ul div {
-    background-color: red;
-    color : pink;
+    /* background-color: #f2f2f2; */
+    background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
+    color : rgb(58, 58, 58);
     margin: auto;
-    width: 33%;
-    padding-left: -2rem;
+    width: 30%;
+    border: 0.5px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    
+}
+
+ul p {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/* Close Button / Filter button / random Button  */
+
+
+.closeButton {
+    background-color: rgb(255, 59, 48);
+    width: 40px;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding : 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.filterButton {
+    /* background-color: #497be8; */
+    background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
+    padding : 5px;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding : 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.randomButton {
+    /* background-color: rgb(255, 149, 0); */
+    background: linear-gradient(to bottom, rgb(241, 168, 66) 0%, rgb(255, 149, 0) 100%);
+    padding : 5px;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding : 5px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
