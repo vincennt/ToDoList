@@ -45,3 +45,14 @@ function suprimeTask(i){
         `
     })
 }
+
+
+// button random
+
+function randomTask(num){
+    var min = 1;
+    var max = 10;
+    var random = Math.floor(Math.random() * (max - min + 1) + min)
+    console.log(random);
+    
+}
