@@ -44,23 +44,25 @@ function suprimeTask(i){
             </div>
         `
     })
+    
+    console.log(arrayTaches);
 }
 
 
 
 // function random
 function randomtask() {
-    var taskRandom =["lundi boxe a 16h30", "jeudi faire les courses", " vendredi à 18h récupérer les enfant a l'école", "samedi soir soirée entres potes"]
+    var taskRandom =["lundi boxe a 16h30", "jeudi faire les courses", " vendredi à 18h récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
     var min = 0;
-    var max = 3;
+    var max = 5;
     var random = Math.floor(Math.random() * (max - min + 1) + min)
-    arrayTaches.push(taskRandom[random])
+    
 
     console.log(random);
     console.log(taskRandom[random]);
     console.log(arrayTaches);
 
-    var inputValue = document.getElementById("myInput").value;
+    var inputValue = taskRandom[random];
     var tache = {
         status: "todo",
         value: inputValue
@@ -82,8 +84,5 @@ function randomtask() {
     })
 
     document.getElementById("myInput").value = ''
-
-    
-
-   
+    console.log(arrayTaches);
 }
