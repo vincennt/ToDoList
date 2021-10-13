@@ -79,6 +79,7 @@ function randomtask() {
             <div class="div-task">
                 ${tache.value}
                 <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                <button onclick="suprimeTask(${index})" class="button_suprim">XXX</button>
             </div>
         `
     })
