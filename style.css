@@ -85,31 +85,38 @@
     }
     
     .div-task {
-        text-align: center;
         font-size: 19px;
         width: 500px;
         display: flex;
         justify-content: space-between;
-        padding: 5px 20px;
+        padding: 5px 10px 5px 20px;
         font-weight: bold;
         word-wrap: break-word
     }
     /* Close Button / Filter button / random Button  */
     
     .button_suprim {
-        background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
+        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
         width: 40px;
         height: 100%;
         border: none;
         outline: none;
-        color: #fff;
+        color: black;
         margin-left: 10px;
         border-radius: 5px;
+        transition: 0.3s;
+
+
     }
     
     .button_suprim:hover {
-        background: linear-gradient(to bottom, rgb(255, 121, 113) 0%, rgb(236, 5, 5) 100%);
+        background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
+        right: 0;
+        color: white;
     }
+
+
+
     
     .filterButton {
         background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
@@ -144,7 +151,7 @@
     .modifButton {
         background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
         color: #fff;
-        width: 70px;
+        width: 40px;
         height: 100%;
         border: none;
         padding: 5px;
