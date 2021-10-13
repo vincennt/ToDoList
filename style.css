@@ -88,7 +88,10 @@ ul div {
 
 .div-task {
     text-align: center;
-    padding-top: 10px;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px; 
     font-weight: bold;
 }
 
@@ -102,7 +105,7 @@ ul div {
     border: none;
     outline: none;
     color: #fff;
-    padding: 5px;
+    
     margin-left: 10px;
     border-radius: 5px;
 }
@@ -154,3 +157,4 @@ ul div {
 
 .modifButton:hover {
     background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
+}
