@@ -15,36 +15,39 @@ function onTaskSubmit() {
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache,index) {
+    arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
                 <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
+
             </div>
         `
     })
 
     document.getElementById("myInput").value = ''
-    
+
 }
 
 // function qui filtre le tableau et re affiche les nouvelle valeur du tableau après avoir suprimer la tache 
-function suprimeTask(i){
-    arrayTaches = arrayTaches.filter(function(value,index) {
+function suprimeTask(i) {
+    arrayTaches = arrayTaches.filter(function(value, index) {
         return i !== index;
     });
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache,index) {
+    arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
                 <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                
             </div>
         `
     })
-    
+
     console.log(arrayTaches);
 }
 
@@ -52,11 +55,11 @@ function suprimeTask(i){
 
 // function random
 function randomtask() {
-    var taskRandom =["lundi boxe a 16h30", "jeudi faire les courses", " vendredi à 18h récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
+    var taskRandom = ["lundi boxe a 16h30", "jeudi faire les courses", " vendredi à 18h récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
     var min = 0;
     var max = 5;
     var random = Math.floor(Math.random() * (max - min + 1) + min)
-    
+
 
     console.log(random);
     console.log(taskRandom[random]);
@@ -74,16 +77,21 @@ function randomtask() {
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache,index) {
+    arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
                 <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                <button onclick="suprimeTask(${index})" class="button_suprim">XXX</button>
+                <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
             </div>
         `
     })
 
     document.getElementById("myInput").value = ''
-    console.log(arrayTaches);
+
 }
+
+function newInput() {
+
+}
+console.log(arrayTaches);
