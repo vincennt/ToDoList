@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+
 body {
     height: 100vh;
     width: 100%;
@@ -113,7 +120,7 @@ ul div {
     border: none;
     outline: none;
     color: #fff;
-    padding : 5px;
+    padding : 5px 10px;
     margin-left: 10px;
     border-radius: 5px;
 }
@@ -130,7 +137,7 @@ ul div {
     color: #fff;
     height: 100%;
     margin-left: 10px;
-    padding : 5px;
+    padding : 5px 10px;
 }
 
 .randomButton:hover {
