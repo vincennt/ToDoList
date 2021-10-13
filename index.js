@@ -20,8 +20,8 @@ function onTaskSubmit() {
             <div class="div-task">
                 ${tache.value}
                 <div class="buttonDiv">
-                <button onclick="newInput(${index})" class="button-modif">...</button>
-                <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                    <button onclick="newInput(${index})" class="button-modif">...</button>
+                    <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
                 </div>
             </div>
         `
@@ -43,8 +43,10 @@ function suprimeTask(i) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
-                <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                
+                <div class="buttonDiv">
+                    <button onclick="newInput(${index})" class="button-modif">...</button>
+                    <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                </div>
             </div>
         `
     })

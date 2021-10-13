@@ -96,8 +96,6 @@
    .div-task > .buttonDiv {
         display: flex;
         flex-direction: row;
-        padding: 5px;
-        
     }
     
     
@@ -140,7 +138,8 @@
         border: none;
         outline: none;
         padding: 5px;
-        margin-left: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
         border-radius: 5px;
         transition: 0.3s;
         align-content: center;
