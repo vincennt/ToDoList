@@ -18,7 +18,7 @@ function onTaskSubmit() {
 
     arrayTaches.forEach(function(tache) {
         list.innerHTML = list.innerHTML + `
-            <div class= div-task>${tache.value}</div>
+            <div class="div-task">${tache.value}</div>
         `
     })
 

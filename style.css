@@ -83,7 +83,7 @@ ul div {
     
 }
 
-ul p {
+.div-task {
     text-align: center;
     padding-top: 10px;
     font-weight: bold;
@@ -131,6 +131,10 @@ ul p {
     height: 100%;
     margin-left: 10px;
     padding : 5px;
+}
+
+.randomButton:hover {
+    background: linear-gradient(to bottom, rgb(255, 192, 104) 0%, rgb(250, 174, 68) 100%);
 }
 
 
