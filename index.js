@@ -2,10 +2,9 @@
 var arrayTaches = []
 
 function onTaskSubmit() {
-    var div = document.createElement("div");
-    var para = document.createElement("p");
     var inputValue = document.getElementById("myInput").value;
-    // var txt = document.createTextNode(inputValue);
+    var list = document.getElementById("myUL")
+        // var txt = document.createTextNode(inputValue);
     var tache = {
         status: "todo",
         value: inputValue
@@ -15,13 +14,23 @@ function onTaskSubmit() {
     arrayTaches.push(tache)
     console.log(arrayTaches)
 
-    var getInput = arrayTaches.map(function(tache) {
+    list.innerHTML = ''
 
-        var txt = document.createTextNode(tache.value);
-        para.appendChild(txt);
-        document.getElementById("myUL").appendChild(div).appendChild(para);
-
+    arrayTaches.forEach(function(tache) {
+        list.innerHTML = list.innerHTML + `
+            <p>${tache.value}</p>
+        `
     })
+
+
+
+    // var getInput = arrayTaches.map(function(tache) {
+
+    //     var txt = document.createTextNode(tache.value);
+    //     para.appendChild(txt);
+    //     document.getElementById("myUL").appendChild(div).appendChild(para);
+
+    // })
     document.getElementById("myInput").value = ''
 
 
