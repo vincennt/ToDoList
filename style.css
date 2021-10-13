@@ -73,50 +73,33 @@
         margin-right: 32px;
     }
     
-    ul div {
-        /* background-color: #f2f2f2; */
-        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
+    ul div {*/
         color: rgb(58, 58, 58);
         margin: auto;
         width: 30%;
-        border: 0.5px solid #ccc;
+        
         border-radius: 10px;
         margin-bottom: 8px;
     }
     
     .div-task {
+        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
         font-size: 19px;
         width: 500px;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        justify-content: flex-end;
         padding: 5px 10px 5px 20px;
         font-weight: bold;
-        word-wrap: break-word
+        word-wrap: break-word;
+        border: 0.5px solid #ccc;
+        
     }
     /* Close Button / Filter button / random Button  */
     
-    .button_suprim {
-        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
-        width: 40px;
-        height: 100%;
-        border: none;
-        outline: none;
-        color: black;
-        margin-left: 10px;
-        border-radius: 5px;
-        transition: 0.3s;
-
-
-    }
     
-    .button_suprim:hover {
-        background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
-        right: 0;
-        color: white;
-    }
-
-
-
+    
+    
     
     .filterButton {
         background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
@@ -148,17 +131,38 @@
         background: linear-gradient(to bottom, rgb(255, 192, 104) 0%, rgb(250, 174, 68) 100%);
     }
     
-    .modifButton {
+    .button-modif {
         background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
         color: #fff;
         width: 40px;
         height: 100%;
         border: none;
+        outline: none;
         padding: 5px;
         margin-left: 10px;
         border-radius: 5px;
+        transition: 0.3s;
     }
     
-    .modifButton:hover {
+    .button-modif:hover {
         background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
+    }
+    .button_suprim {
+        background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
+        color: black;
+        width: 40px;
+        height: 100%;
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        border-radius: 5px;
+        transition: 0.3s;
+        padding: 5px;
+        left: 130px
+    }
+    
+    .button_suprim:hover {
+        background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
+        right: 0;
+        color: white;
     }
