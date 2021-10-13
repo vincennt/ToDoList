@@ -120,7 +120,10 @@ function randomtask() {
 
     document.getElementById("myInput").value = ''
 
+}
 
-
-
+function newInput() {
+    document.getElementsByClassName("div-task").innerHTML = `
+    <input type = "text"placeholder = "Modifier votre tâche" onclik = "changeTask()">
+    `
 }
