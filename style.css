@@ -86,10 +86,12 @@
     
     .div-task {
         font-size: 19px;
+        width: 500px;
         display: flex;
         justify-content: space-between;
         padding: 5px 10px 5px 20px;
         font-weight: bold;
+        word-wrap: break-word
     }
     /* Close Button / Filter button / random Button  */
     
