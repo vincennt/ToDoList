@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 h1 {
     font-family: 'Pacifico', cursive;
 }
-
 
 body {
     height: 100vh;
@@ -11,13 +9,11 @@ body {
     background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%)
 }
 
-
-.container{
-    padding : 30px;
+.container {
+    padding: 30px;
     background-color: #fff;
     margin: 100px 200px;
     border-radius: 30px;
-    
 }
 
 header {
@@ -38,7 +34,6 @@ footer {
     justify-content: space-around;
 }
 
-
 .taskItems {
     display: flex;
     flex-direction: column;
@@ -47,16 +42,18 @@ footer {
 }
 
 .customButtton {
-    background: linear-gradient(to bottom, #ba8ff1 0%, #8e49e8 100%);;
+    background: linear-gradient(to bottom, #ba8ff1 0%, #8e49e8 100%);
+    ;
     width: 60px;
     height: 100%;
     border: none;
     outline: none;
     color: #fff;
-    padding : 5px;
+    padding: 5px;
     margin-left: 10px;
     border-radius: 5px;
 }
+
 .customButtton:hover {
     background: linear-gradient(to bottom, #ceaff6 0%, #a764ff 100%);
 }
@@ -69,8 +66,8 @@ footer {
     border-radius: 3px;
     background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, #e0e0e0 100%);
     padding: 4px;
-
 }
+
 
 /* Added Task Section */
 
@@ -81,13 +78,12 @@ ul {
 ul div {
     /* background-color: #f2f2f2; */
     background: linear-gradient(to bottom, #fff 50%, #e0e0e0 100%);
-    color : rgb(58, 58, 58);
+    color: rgb(58, 58, 58);
     margin: auto;
     width: 30%;
     border: 0.5px solid #ccc;
     border-radius: 10px;
     margin-bottom: 8px;
-    
 }
 
 .div-task {
@@ -96,8 +92,8 @@ ul div {
     font-weight: bold;
 }
 
-/* Close Button / Filter button / random Button  */
 
+/* Close Button / Filter button / random Button  */
 
 .button_suprim {
     background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
@@ -106,10 +102,11 @@ ul div {
     border: none;
     outline: none;
     color: #fff;
-    padding : 5px;
+    padding: 5px;
     margin-left: 10px;
     border-radius: 5px;
 }
+
 .button_suprim:hover {
     background: linear-gradient(to bottom, rgb(255, 121, 113) 0%, rgb(236, 5, 5) 100%);
 }
@@ -120,7 +117,7 @@ ul div {
     border: none;
     outline: none;
     color: #fff;
-    padding : 5px 10px;
+    padding: 5px 10px;
     margin-left: 10px;
     border-radius: 5px;
 }
@@ -137,13 +134,12 @@ ul div {
     color: #fff;
     height: 100%;
     margin-left: 10px;
-    padding : 5px 10px;
+    padding: 5px 10px;
 }
 
 .randomButton:hover {
     background: linear-gradient(to bottom, rgb(255, 192, 104) 0%, rgb(250, 174, 68) 100%);
 }
-
 
 .modifButton {
     background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
@@ -151,11 +147,10 @@ ul div {
     width: 70px;
     height: 100%;
     border: none;
-    padding : 5px;
+    padding: 5px;
     margin-left: 10px;
     border-radius: 5px;
 }
-.modifButton:hover {
-    background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
 
-}
+.modifButton:hover {
+    background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);}
