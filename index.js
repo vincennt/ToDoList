@@ -56,7 +56,7 @@ function suprimeTask(i) {
 
 // function random
 function randomtask() {
-    var taskRandom = ["lundi boxe a 16h30", "jeudi faire les courses", " vendredi à 18h récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
+    var taskRandom = ["lundi boxe a 16h30", "jeudi faire les courses", " vendredi récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
     var min = 0;
     var max = 5;
     var random = Math.floor(Math.random() * (max - min + 1) + min)
