@@ -1,3 +1,4 @@
+// Fonction écrire une tâche
 var arrayTaches = []
 var list = document.getElementById("myUL")
 
@@ -14,7 +15,7 @@ function onTaskSubmit() {
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache, index) {
+    arrayTaches.forEach(function(tache,index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
@@ -24,18 +25,18 @@ function onTaskSubmit() {
     })
 
     document.getElementById("myInput").value = ''
-
+    
 }
 
 // function qui filtre le tableau et re affiche les nouvelle valeur du tableau après avoir suprimer la tache 
-function suprimeTask(i) {
-    arrayTaches = arrayTaches.filter(function(value, index) {
+function suprimeTask(i){
+    arrayTaches = arrayTaches.filter(function(value,index) {
         return i !== index;
     });
 
     list.innerHTML = ''
 
-    arrayTaches.forEach(function(tache, index) {
+    arrayTaches.forEach(function(tache,index) {
         list.innerHTML = list.innerHTML + `
             <div class="div-task">
                 ${tache.value}
@@ -43,15 +44,4 @@ function suprimeTask(i) {
             </div>
         `
     })
-}
-
-
-// button random
-
-function randomTask(num){
-    var min = 1;
-    var max = 10;
-    var random = Math.floor(Math.random() * (max - min + 1) + min)
-    console.log(random);
-    
 }
