@@ -44,7 +44,6 @@
     
     .customButtton {
         background: linear-gradient(to bottom, #ba8ff1 0%, #8e49e8 100%);
-        ;
         width: 60px;
         height: 100%;
         border: none;
@@ -56,7 +55,7 @@
     }
     
     .customButtton:hover {
-        background: linear-gradient(to bottom, #ceaff6 0%, #a764ff 100%);
+        background: linear-gradient(to bottom, #a764ff 0%,  #852df8 100%);
     }
     
     .customInput {
@@ -162,5 +161,5 @@
     }
     
     .button_suprim:hover {
-        background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
+        background: linear-gradient(to bottom, rgb(236, 5, 5) 0%, rgb(165, 5, 5) 100%);
     }
