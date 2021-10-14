@@ -4,9 +4,7 @@ var list = document.getElementById("myUL")
 
 function onTaskSubmit() {
     var inputValue = document.getElementById("myInput").value;
-    if (inputValue == "") {
-        document.getElementById("myInput").value = ''
-    } else
+    if (inputValue == "") {} else
         var tasks = {
             status: "todo",
             value: inputValue,
@@ -15,6 +13,7 @@ function onTaskSubmit() {
     arrayTaches.push(tasks)
     console.log(tasks);
     console.log(arrayTaches)
+    document.getElementById("myInput").value = ''
 
     displayList(arrayTaches)
 
