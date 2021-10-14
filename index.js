@@ -2,22 +2,21 @@
 var arrayTaches = []
 var list = document.getElementById("myUL")
 
-
-
-
 function onTaskSubmit() {
     var inputValue = document.getElementById("myInput").value;
-    var tasks = {
-        status: "todo",
-        value: inputValue
-    }
+    if (inputValue == "") {
+        document.getElementById("myInput").value = ''
+    } else
+        var tasks = {
+            status: "todo",
+            value: inputValue,
+            priority: Number
+        }
     arrayTaches.push(tasks)
     console.log(tasks);
     console.log(arrayTaches)
 
     displayList(arrayTaches)
-
-    document.getElementById("myInput").value = ''
 
 }
 
