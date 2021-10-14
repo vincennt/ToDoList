@@ -67,7 +67,7 @@ function newInput(index) {
     item.innerHTML = item.innerHTML + `
         <form onsubmit="modifValueStatus(${index}); return false;">
             <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
-            <button class="customButtton" type="submit" class="addBtn">Modifer</button>
+            <button type="submit" class="modifBtn">...</button>
             <select class="filterButton" name="Filter" id="filter">
                     <option class="optionsBtn" value="to-do">To Do</option>
                     <option class="optionsBtn" value="doing">Doing</option>
