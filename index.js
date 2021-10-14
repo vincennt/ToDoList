@@ -68,7 +68,7 @@ function newInput(index) {
             <input class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
             <button class="customButtton" type="submit" class="addBtn">Add</button>
             <div class="btn-group">
-            <div class="btn-group dropleft" role="group">
+            <div class="btn-group" role="group">
             <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only text-white">Status</span>
             </button>
