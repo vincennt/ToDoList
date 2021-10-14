@@ -92,6 +92,9 @@ function randomtask() {
 }
 
 function newInput() {
-
+    list.innerHTML = list.innerHTML + `
+    <button type="submit" id="edit-button">Edit</button>
+    <button type="submit" id="end-editing">Done</button>
+`
 }
-console.log(arrayTaches);
+console.log(arrayTaches)
