@@ -17,7 +17,7 @@ function onTaskSubmit() {
 
     arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class="div-task">
+            <div id="tache-${index}" class="div-task">
                 ${tache.value}
                 <div class="buttonDiv">
                     <button onclick="newInput(${index})" class="button-modif">...</button>
@@ -41,7 +41,7 @@ function suprimeTask(i) {
 
     arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class="div-task">
+            <div id="tache-${index}" class="div-task">
                 ${tache.value}
                 <div class="buttonDiv">
                     <button onclick="newInput(${index})" class="button-modif">...</button>
@@ -82,13 +82,10 @@ function randomtask() {
 
     arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class="div-task">
-                    ${tache.value}
-                    <div class="buttonDiv">
-                        <button onclick="newInput(${index})" class="button-modif">...</button>
-                        <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                    </div>
-                </div>
+            <div id="tache-${index}" class="div-task">
+                ${tache.value}
+                <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
             </div>
         `
     })
@@ -96,8 +93,19 @@ function randomtask() {
     document.getElementById("myInput").value = ''
 
 }
+// FUNCTION MODIFIER
+function newInput(index) {
+    console.log("l'index de la fonction modifier ", index);
+    var item = document.getElementById(`tache-${index}`)
+    console.log("new input valeur de item", item);
+    item.innerHTML = item.innerHTML + `
+<form onsubmit="onTaskSubmit(); return false;">
+    <input class="customInput" value="${arrayTaches[index].value} type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
+    <button class="customButtton" type="submit" class="addBtn">Add</button>
+</form>
+`
 
-function newInput() {
+
 
 }
 console.log(arrayTaches);
