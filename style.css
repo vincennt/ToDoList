@@ -9,6 +9,7 @@
         background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
     }
     
+    /*  White container  */
     .container {
         padding: 30px;
         background-color: #fff;
@@ -16,24 +17,24 @@
         border-radius: 30px;
     }
     
+
+    /* Header */
+
+
     header {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
     
+    /* Main Section */
+
     form {
         margin: 60px;
         display: flex;
         justify-content: center;
     }
-    
-    footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 150px 0 50px 0;
-    }
+
     
     .taskItems {
         display: flex;
@@ -92,7 +93,7 @@
         align-items: center;
     }
 
-   .div-task > .buttonDiv {
+    .div-task > .buttonDiv {
         display: flex;
         flex-direction: row;
     }
@@ -114,20 +115,6 @@
         background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
     }
     
-    .randomButton {
-        background: linear-gradient(to bottom, rgb(241, 168, 66) 0%, rgb(255, 149, 0) 100%);
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        color: #fff;
-        height: 100%;
-        margin-left: 10px;
-        padding: 5px 10px;
-    }
-    
-    .randomButton:hover {
-        background: linear-gradient(to bottom, rgb(255, 192, 104) 0%, rgb(250, 174, 68) 100%);
-    }
     
     .button-modif {
         background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
@@ -147,6 +134,25 @@
     .button-modif:hover {
         background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
     }
+
+    .modifBtn {
+        border: none;
+        outline: none;
+        background: linear-gradient(to bottom, #81a7f8 0%, #497be8 100%);
+        padding: 5px;
+        align-content: center;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: 5px;
+        word-break: break-all;
+
+    }
+
+    .optionsBtn {
+        color: black;
+    }
+
+
     .button_suprim {
         background: linear-gradient(to bottom, red 0%, rgb(236, 5, 5) 100%);
         color: white;
@@ -162,4 +168,29 @@
     
     .button_suprim:hover {
         background: linear-gradient(to bottom, rgb(236, 5, 5) 0%, rgb(165, 5, 5) 100%);
+    }
+
+    
+    /* Footer */
+    
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 150px 0 50px 0;
+    }
+
+    .randomButton {
+        background: linear-gradient(to bottom, rgb(241, 168, 66) 0%, rgb(255, 149, 0) 100%);
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: #fff;
+        height: 100%;
+        margin-left: 10px;
+        padding: 5px 10px;
+    }
+    
+    .randomButton:hover {
+        background: linear-gradient(to bottom, rgb(255, 192, 104) 0%, rgb(250, 174, 68) 100%);
     }

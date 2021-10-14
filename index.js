@@ -1,5 +1,7 @@
 // Fonction écrire une tâche
-var arrayTaches = []
+var arrayTaches = [{ status: 'done', value: 'salut' },
+    { status: 'doing', value: 'hello' }
+]
 var list = document.getElementById("myUL")
 
 
@@ -15,7 +17,7 @@ function onTaskSubmit() {
     console.log(tasks);
     console.log(arrayTaches)
 
-    displayList()
+    displayList(arrayTaches)
 
     document.getElementById("myInput").value = ''
 
@@ -26,7 +28,7 @@ function suprimeTask(i) {
     arrayTaches = arrayTaches.filter(function(value, index) {
         return i !== index;
     });
-    displayList()
+    displayList(arrayTaches)
     console.log(arrayTaches);
 }
 
@@ -54,7 +56,7 @@ function randomtask() {
     arrayTaches.push(tasks)
     console.log(arrayTaches)
 
-    displayList()
+    displayList(arrayTaches)
 
     document.getElementById("myInput").value = ''
 
@@ -68,7 +70,7 @@ function newInput(index) {
     item.innerHTML = item.innerHTML + `
         <form onsubmit="modifValueStatus(${index}); return false;">
             <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
-            <button class="customButtton" type="submit" class="addBtn">Modifer</button>
+            <button type="submit" class="modifBtn">...</button>
             <select class="filterButton" name="Filter" id="filter">
                 <option value="">statut
                 <option class="optionsBtn" value="to-do">To Do</option>
@@ -93,18 +95,19 @@ function modifValueStatus(index) {
     console.log(index);
     var inputValue = document.getElementById("input-modif-text").value;
     arrayTaches[index].value = inputValue
-    displayList()
+    displayList(arrayTaches)
     console.log(arrayTaches);
 }
+// function status(index){
+//     var inputValue1 = document.getElementsByClassName("input-modif-text").value;
+//     arrayTaches[index].status = inputValue1
+// }
 
-function status(index) {
 
-}
-
-function displayList() {
+function displayList(array) {
 
     list.innerHTML = ''
-    arrayTaches.forEach(function(tasks, index) {
+    array.forEach(function(tasks, index) {
         list.innerHTML = list.innerHTML + `
                 <div id="tache-${index}" class="div-task">
                     <p>${tasks.value}</p>
@@ -130,4 +133,13 @@ function displayListWhitoutButton() {
                 </div>
             `
     })
+}
+
+function filterstatus(value) {
+    var filterByStatus = arrayTaches.filter(function(task) {
+        return value == task.status;
+    });
+    displayList(filterByStatus)
+
+    console.log(" resulta du filtre status ", filterByStatus);
 }
