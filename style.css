@@ -4,9 +4,9 @@
     }
     
     body {
-        height: 100vh;
+        min-height: 90vh;
         width: 100%;
-        background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%)
+        background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
     }
     
     .container {
