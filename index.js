@@ -67,7 +67,7 @@ function newInput(index) {
     console.log("new input valeur de item", item);
     item.innerHTML = item.innerHTML + `
         <form onsubmit="modifValueStatus(${index}); return false;">
-            <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
+            <input id="input-modif-text" class="modifSize" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
             <button type="submit" class="modifBtn">...</button>
             <select class="filterButton" name="Filter" id="filter">
                 <option value="">statut
@@ -125,7 +125,7 @@ function displayListWhitoutButton() {
     arrayTaches.forEach(function(tasks, index) {
         list.innerHTML = list.innerHTML + `
                 <div id="tache-${index}" class="div-task">
-                    <p>${tasks.value}</p>
+                    <p class="hidenClass">${tasks.value}</p>
                     <div class="buttonDiv">
                     </div>
                 </div>

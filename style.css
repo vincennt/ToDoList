@@ -194,3 +194,18 @@
     .randomButton:hover {
         background: linear-gradient(to bottom, rgb(255, 192, 104) 0%, rgb(250, 174, 68) 100%);
     }
+
+
+    .hidenClass {
+        display: none;
+    }
+
+    .modifSize {
+        size:70%;
+        border: 1px solid rgb(107, 107, 107);
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 3px;
+        background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, #e0e0e0 100%);
+        padding: 4px;
+    }
