@@ -82,7 +82,8 @@ function modifValueStatus(index) {
     console.log(arrayTaches);
 }
 function status(index){
-    
+    var inputValue1 = document.getElementsByClassName("input-modif-text").value;
+    arrayTaches[index].status = inputValue1
 }
 
 function displayList() {
