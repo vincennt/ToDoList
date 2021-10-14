@@ -69,9 +69,6 @@ function newInput(index) {
     <button class="customButtton" type="submit" class="addBtn">Add</button>
 </form>
 `
-
-
-
 }
 console.log(arrayTaches);
 
