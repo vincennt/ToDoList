@@ -60,25 +60,14 @@ function randomtask() {
 }
 // FUNCTION MODIFIER
 function newInput(index) {
+    displayListWhitoutButton()
     console.log("l'index de la fonction modifier ", index);
     var item = document.getElementById(`tache-${index}`)
     console.log("new input valeur de item", item);
     item.innerHTML = item.innerHTML + `
         <form onsubmit="modifValueStatus(${index}); return false;">
             <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
-            <button class="customButtton" type="submit" class="addBtn">Add</button>
-            <div class="btn-group">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only text-white">Status</span>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item bg-warning text-center" href="#">To do</a>
-                        <a class="dropdown-item bg-primary text-center" href="#">Doing</a>
-                        <a class="dropdown-item bg-success text-center" href="#">Done</a>
-                    </div>
-                </div>
-            </div>
+            <button class="customButtton" type="submit" class="addBtn">Modifer</button>
         </form>
         
     `
@@ -106,6 +95,20 @@ function displayList() {
                     <div class="buttonDiv">
                         <button onclick="newInput(${index})" class="button-modif">...</button>
                         <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                    </div>
+                </div>
+            `
+    })
+}
+
+function displayListWhitoutButton() {
+
+    list.innerHTML = ''
+    arrayTaches.forEach(function(tasks, index) {
+        list.innerHTML = list.innerHTML + `
+                <div id="tache-${index}" class="div-task">
+                    ${tasks.value}
+                    <div class="buttonDiv">
                     </div>
                 </div>
             `
