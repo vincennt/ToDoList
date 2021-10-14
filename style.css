@@ -113,6 +113,11 @@
     .filterButton:hover {
         background: linear-gradient(to bottom, rgb(121, 179, 245) 0%, #580aff 100%);
     }
+
+    .optionsBtn {
+        color:black;
+    }
+
     
     .randomButton {
         background: linear-gradient(to bottom, rgb(241, 168, 66) 0%, rgb(255, 149, 0) 100%);
