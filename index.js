@@ -125,7 +125,7 @@ function displayListWhitoutButton() {
     arrayTaches.forEach(function(tasks, index) {
         list.innerHTML = list.innerHTML + `
                 <div id="tache-${index}" class="div-task">
-                    ${tasks.value}
+                    <p>${tasks.value}</p>
                     <div class="buttonDiv">
                     </div>
                 </div>
