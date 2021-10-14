@@ -79,8 +79,8 @@ function newInput(index) {
 }
 
 function modifValueStatus(index) {
-    if ()
-        console.log("la function est bien apeller ");
+
+    console.log("la function est bien apeller ");
     console.log(index);
     var inputValue = document.getElementById("input-modif-text").value;
     arrayTaches[index].value = inputValue
@@ -88,6 +88,9 @@ function modifValueStatus(index) {
     console.log(arrayTaches);
 }
 
+function status(index) {
+
+}
 
 function displayList() {
 
