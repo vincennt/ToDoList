@@ -2,30 +2,19 @@
 var arrayTaches = []
 var list = document.getElementById("myUL")
 
+
+
 function onTaskSubmit() {
     var inputValue = document.getElementById("myInput").value;
-    var tache = {
+    var tasks = {
         status: "todo",
         value: inputValue
     }
-
-    console.log(tache);
-    arrayTaches.push(tache)
+    arrayTaches.push(tasks)
+    console.log(tasks);
     console.log(arrayTaches)
 
-    list.innerHTML = ''
-
-    arrayTaches.forEach(function(tache, index) {
-        list.innerHTML = list.innerHTML + `
-            <div id="tache-${index}" class="div-task">
-                ${tache.value}
-                <div class="buttonDiv">
-                    <button onclick="newInput(${index})" class="button-modif">...</button>
-                    <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                </div>
-            </div>
-        `
-    })
+    displayList()
 
     document.getElementById("myInput").value = ''
 
@@ -36,21 +25,7 @@ function suprimeTask(i) {
     arrayTaches = arrayTaches.filter(function(value, index) {
         return i !== index;
     });
-
-    list.innerHTML = ''
-
-    arrayTaches.forEach(function(tache, index) {
-        list.innerHTML = list.innerHTML + `
-            <div id="tache-${index}" class="div-task">
-                ${tache.value}
-                <div class="buttonDiv">
-                    <button onclick="newInput(${index})" class="button-modif">...</button>
-                    <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                </div>
-            </div>
-        `
-    })
-
+    displayList()
     console.log(arrayTaches);
 }
 
@@ -69,26 +44,16 @@ function randomtask() {
     console.log(arrayTaches);
 
     var inputValue = taskRandom[random];
-    var tache = {
+    var tasks = {
         status: "todo",
         value: inputValue
     }
 
-    console.log(tache);
-    arrayTaches.push(tache)
+    console.log(tasks);
+    arrayTaches.push(tasks)
     console.log(arrayTaches)
 
-    list.innerHTML = ''
-
-    arrayTaches.forEach(function(tache, index) {
-        list.innerHTML = list.innerHTML + `
-            <div id="tache-${index}" class="div-task">
-                ${tache.value}
-                <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
-            </div>
-        `
-    })
+    displayList()
 
     document.getElementById("myInput").value = ''
 
@@ -109,3 +74,20 @@ function newInput(index) {
 
 }
 console.log(arrayTaches);
+
+
+function displayList() {
+
+    list.innerHTML = ''
+    arrayTaches.forEach(function(tasks, index) {
+        list.innerHTML = list.innerHTML + `
+                <div id="tache-${index}" class="div-task">
+                    ${tasks.value}
+                    <div class="buttonDiv">
+                        <button onclick="newInput(${index})" class="button-modif">...</button>
+                        <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                    </div>
+                </div>
+            `
+    })
+}
