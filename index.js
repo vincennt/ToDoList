@@ -92,7 +92,9 @@ function modifValueStatus(index) {
     displayList()
     console.log(arrayTaches);
 }
-
+function status(index){
+    
+}
 
 function displayList() {
 
