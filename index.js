@@ -64,11 +64,36 @@ function newInput(index) {
     var item = document.getElementById(`tache-${index}`)
     console.log("new input valeur de item", item);
     item.innerHTML = item.innerHTML + `
-<form onsubmit="onTaskSubmit(); return false;">
-    <input class="customInput" value="${arrayTaches[index].value} type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
-    <button class="customButtton" type="submit" class="addBtn">Add</button>
-</form>
+        <form onsubmit="modifValueStatus(); return false;">
+            <input class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
+            <button class="customButtton" type="submit" class="addBtn">Add</button>
+            <div class="btn-group">
+            <div class="btn-group dropleft" role="group">
+            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only text-white">Status</span>
+            </button>
+            <div class="dropdown-menu">
+                    <a class="dropdown-item bg-warning text-center" href="#">To do</a>
+                    <a class="dropdown-item bg-primary text-center" href="#">Doing</a>
+                    <a class="dropdown-item bg-success text-center" href="#">Done</a>
+            </div>
+            </div>
+        </div>
+        </form>
+        
 `
+}
+
+function modifValueStatus() {
+    console.log("la function est bien apeller ");
+
+    var inputValue = document.getElementById("myInput").value;
+    var tasks = {
+        status: "todo",
+        value: inputValue
+    }
+    arrayTaches.push(tasks)
+    displayList()
 }
 console.log(arrayTaches);
 
