@@ -68,13 +68,19 @@ function newInput(index) {
         <form onsubmit="modifValueStatus(${index}); return false;">
             <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
             <button class="customButtton" type="submit" class="addBtn">Modifer</button>
+            <select class="filterButton" name="Filter" id="filter">
+                    <option class="optionsBtn" value="to-do">To Do</option>
+                    <option class="optionsBtn" value="doing">Doing</option>
+                    <option class="optionsBtn" value="done">Done</option>
+                </select>
         </form>
         
     `
 }
 
 function modifValueStatus(index) {
-    console.log("la function est bien apeller ");
+    if ()
+        console.log("la function est bien apeller ");
     console.log(index);
     var inputValue = document.getElementById("input-modif-text").value;
     arrayTaches[index].value = inputValue
