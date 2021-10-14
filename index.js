@@ -1,7 +1,5 @@
 // Fonction écrire une tâche
-var arrayTaches = [{ status: 'done', value: 'salut' },
-    { status: 'doing', value: 'hello' }
-]
+var arrayTaches = []
 var list = document.getElementById("myUL")
 
 
