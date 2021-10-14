@@ -64,8 +64,8 @@ function newInput(index) {
     var item = document.getElementById(`tache-${index}`)
     console.log("new input valeur de item", item);
     item.innerHTML = item.innerHTML + `
-        <form onsubmit="modifValueStatus(); return false;">
-            <input class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
+        <form onsubmit="modifValueStatus(${index}); return false;">
+            <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
             <button class="customButtton" type="submit" class="addBtn">Add</button>
             <div class="btn-group">
             <div class="btn-group dropleft" role="group">
@@ -84,18 +84,14 @@ function newInput(index) {
 `
 }
 
-function modifValueStatus() {
+function modifValueStatus(index) {
     console.log("la function est bien apeller ");
-
-    var inputValue = document.getElementById("myInput").value;
-    var tasks = {
-        status: "todo",
-        value: inputValue
-    }
-    arrayTaches.push(tasks)
+    console.log(index);
+    var inputValue = document.getElementById("input-modif-text").value;
+    arrayTaches[index].value = inputValue
     displayList()
+    console.log(arrayTaches);
 }
-console.log(arrayTaches);
 
 
 function displayList() {
