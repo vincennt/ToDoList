@@ -1,5 +1,6 @@
 // Fonction écrire une tâche
-var arrayTaches = []
+var arrayTaches = [{status: 'done', value: 'salut'},
+ {status: 'doing', value: 'hello'}]
 var list = document.getElementById("myUL")
 
 
@@ -14,7 +15,7 @@ function onTaskSubmit() {
     console.log(tasks);
     console.log(arrayTaches)
 
-    displayList()
+    displayList(arrayTaches)
 
     document.getElementById("myInput").value = ''
 
@@ -25,7 +26,7 @@ function suprimeTask(i) {
     arrayTaches = arrayTaches.filter(function(value, index) {
         return i !== index;
     });
-    displayList()
+    displayList(arrayTaches)
     console.log(arrayTaches);
 }
 
@@ -53,7 +54,7 @@ function randomtask() {
     arrayTaches.push(tasks)
     console.log(arrayTaches)
 
-    displayList()
+    displayList(arrayTaches)
 
     document.getElementById("myInput").value = ''
 
@@ -84,18 +85,19 @@ function modifValueStatus(index) {
     console.log(index);
     var inputValue = document.getElementById("input-modif-text").value;
     arrayTaches[index].value = inputValue
-    displayList()
+    displayList(arrayTaches)
     console.log(arrayTaches);
 }
-function status(index){
-    var inputValue1 = document.getElementsByClassName("input-modif-text").value;
-    arrayTaches[index].status = inputValue1
-}
+// function status(index){
+//     var inputValue1 = document.getElementsByClassName("input-modif-text").value;
+//     arrayTaches[index].status = inputValue1
+// }
 
-function displayList() {
+
+function displayList(array) {
 
     list.innerHTML = ''
-    arrayTaches.forEach(function(tasks, index) {
+    array.forEach(function(tasks, index) {
         list.innerHTML = list.innerHTML + `
                 <div id="tache-${index}" class="div-task">
                     ${tasks.value}
@@ -120,4 +122,13 @@ function displayListWhitoutButton() {
                 </div>
             `
     })
+}
+
+function filterstatus(value){
+    var filterByStatus = arrayTaches.filter(function(task) {
+        return value == task.status;
+    });
+    displayList(filterByStatus)
+
+    console.log(" resulta du filtre status ",filterByStatus);
 }
