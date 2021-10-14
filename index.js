@@ -65,30 +65,33 @@ function newInput(index) {
     console.log("new input valeur de item", item);
     item.innerHTML = item.innerHTML + `
         <form onsubmit="modifValueStatus(${index}); return false;">
-            <input class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput-modif" placeholder="Ecrivez votre tâche..." />
-            <button onclick="modifValueStatus(arrayTaches[index].value);" class="customButtton" type="submit" class="addBtn">Add</button>
+            <input id="input-modif-text" class="customInput" value="${arrayTaches[index].value}" type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
+            <button class="customButtton" type="submit" class="addBtn">Add</button>
             <div class="btn-group">
-            <div class="btn-group dropleft" role="group">
-            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only text-white">Status</span>
-            </button>
-            <div class="dropdown-menu">
-                    <a class="dropdown-item bg-warning text-center" href="#">To do</a>
-                    <a class="dropdown-item bg-primary text-center" href="#">Doing</a>
-                    <a class="dropdown-item bg-success text-center" href="#">Done</a>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only text-white">Status</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item bg-warning text-center" href="#">To do</a>
+                        <a class="dropdown-item bg-primary text-center" href="#">Doing</a>
+                        <a class="dropdown-item bg-success text-center" href="#">Done</a>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </form>
         
-`
+    `
 }
 
 function modifValueStatus(index) {
-   
-
+    console.log("la function est bien apeller ");
+    console.log(index);
+    var inputValue = document.getElementById("input-modif-text").value;
+    arrayTaches[index].value = inputValue
+    displayList()
+    console.log(arrayTaches);
 }
-
 
 
 function displayList() {
