@@ -17,11 +17,12 @@ function onTaskSubmit() {
 
     arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class="div-task">
+            <div id="tache-${index}" class="div-task">
                 ${tache.value}
-                <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
-
+                <div class="buttonDiv">
+                    <button onclick="newInput(${index})" class="button-modif">...</button>
+                    <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                </div>
             </div>
         `
     })
@@ -40,10 +41,12 @@ function suprimeTask(i) {
 
     arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class="div-task">
+            <div id="tache-${index}" class="div-task">
                 ${tache.value}
-                <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
-                
+                <div class="buttonDiv">
+                    <button onclick="newInput(${index})" class="button-modif">...</button>
+                    <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
+                </div>
             </div>
         `
     })
@@ -55,7 +58,7 @@ function suprimeTask(i) {
 
 // function random
 function randomtask() {
-    var taskRandom = ["lundi boxe a 16h30", "jeudi faire les courses", " vendredi à 18h récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
+    var taskRandom = ["lundi boxe a 16h30", "jeudi faire les courses", " vendredi récupérer les enfant a l'école", "samedi soir soirée entres potes", "dimanche barbecue", "mardi soir impôt a faire"]
     var min = 0;
     var max = 5;
     var random = Math.floor(Math.random() * (max - min + 1) + min)
@@ -79,7 +82,7 @@ function randomtask() {
 
     arrayTaches.forEach(function(tache, index) {
         list.innerHTML = list.innerHTML + `
-            <div class="div-task">
+            <div id="tache-${index}" class="div-task">
                 ${tache.value}
                 <button onclick="suprimeTask(${index})" class="button_suprim">X</button>
                 <button onclick="newInput(${index})" class="button-modif" >Modifier</button>
@@ -90,11 +93,19 @@ function randomtask() {
     document.getElementById("myInput").value = ''
 
 }
-
-function newInput() {
-    list.innerHTML = list.innerHTML + `
-    <button type="submit" id="edit-button">Edit</button>
-    <button type="submit" id="end-editing">Done</button>
+// FUNCTION MODIFIER
+function newInput(index) {
+    console.log("l'index de la fonction modifier ", index);
+    var item = document.getElementById(`tache-${index}`)
+    console.log("new input valeur de item", item);
+    item.innerHTML = item.innerHTML + `
+<form onsubmit="onTaskSubmit(); return false;">
+    <input class="customInput" value="${arrayTaches[index].value} type="text" id="myInput" placeholder="Ecrivez votre tâche..." />
+    <button class="customButtton" type="submit" class="addBtn">Add</button>
+</form>
 `
+
+
+
 }
-console.log(arrayTaches)
+console.log(arrayTaches);
